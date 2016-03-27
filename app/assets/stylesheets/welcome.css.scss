@@ -1,0 +1,68 @@
+#background {
+  background-image: image_url('welcome-background.png');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  header {
+    padding: 3rem 3rem 0 3rem;
+    #logo {
+      float: left;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+    }
+    #span-logo {
+      font-weight: 300;
+      float: left;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+    }
+    nav {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          display: inline;
+          margin-left: 2.5rem;
+          a {
+            font-weight: 300;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 9rem 0 6rem 0;
+  }
+  .button {
+      text-decoration: none;
+      font-size: 1.25rem;
+      color: white;
+      font-weight: 400;
+
+      border-radius: 2rem;
+  }
+  .button_highlight {
+    background-color: #0080ff;
+    padding: 1rem 2rem;
+    margin-right: 2.5rem;
+  }
+  .button_white {
+    background-color: white;
+    color: black;
+    padding: 1rem 3.25rem;
+
+  }
+}
