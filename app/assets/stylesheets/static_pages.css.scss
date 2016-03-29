@@ -55,7 +55,7 @@
       border-radius: 2rem;
   }
   .button_highlight {
-    background-color: #0080ff;
+    background-color: $highlight;
     padding: 1rem 2rem;
     margin-right: 2.5rem;
   }
@@ -63,6 +63,5 @@
     background-color: white;
     color: black;
     padding: 1rem 3.25rem;
-
   }
 }

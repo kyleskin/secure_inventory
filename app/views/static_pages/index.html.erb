@@ -1,11 +1,11 @@
 <div id="background">
   <header>
     <a><%= link_to 'secure', root_path, id: 'logo' %>
-      <span><%= link_to "inventory", root_path, id: 'span-logo' %></span>
+      <span><%= link_to 'inventory', root_path, id: 'span-logo' %></span>
     </a>
     <nav>
       <ul>
-        <li><%= link_to 'About Us', aboutus_path %></li>
+        <li><%= link_to 'About Us', about_path %></li>
         <li><%= link_to 'Create Account' %></li>
         <li><%= link_to 'Sign In' %>
       </ul>
@@ -13,5 +13,5 @@
   </header>
   <h1>when the worst happens<br>we're here for you</h1>
   <%= link_to 'Create Account', root_path, class: 'button button_highlight' %>
-  <%= link_to 'About Us', aboutus_path, class: 'button button_white' %>
+  <%= link_to 'About Us', about_path, class: 'button button_white' %>
 </div>

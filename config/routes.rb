@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-  get '/aboutus' => 'welcome#aboutus'
+  root 'static_pages#index'
+  get '/about' => 'static_pages#about'
 end
