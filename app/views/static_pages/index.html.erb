@@ -1,16 +1,25 @@
 <div id="background">
   <header>
-    <a><%= link_to 'secure', root_path, id: 'logo' %>
-      <span><%= link_to 'inventory', root_path, id: 'span-logo' %></span>
-    </a>
+
+    <div id='brand'>
+        <%= link_to 'secure', root_path, class: 'logo' %>
+        <%= link_to 'inventory', root_path, class: 'logo', id: 'logo_thin' %>
+    </div>
+
+
     <nav>
+
       <ul>
         <li><%= link_to 'About Us', about_path %></li>
         <li><%= link_to 'Create Account' %></li>
         <li><%= link_to 'Sign In' %>
       </ul>
+
     </nav>
+
   </header>
+
+
   <h1>create a secure record of your<br>belongings in case of the worst</h1>
   <%= link_to 'Create Account', root_path, class: 'button button_highlight' %>
   <%= link_to 'What We Do', about_path, class: 'button button_white' %>

@@ -7,25 +7,29 @@
   background-position: center;
   background-size: cover;
   text-align: center;
+
   header {
     padding: 3rem 3rem 0 3rem;
-    #logo {
-      float: left;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: white;
-      text-decoration: none;
-    }
-    #span-logo {
-      padding-left: 2pt;
+
+      .logo {
+        display: inline-block;
+        float: left;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        &:hover {
+        color: darken(white, 30%);
+        }
+      }
+      #logo_thin {
+      padding-left: 3pt;
       font-weight: 300;
-      float: left;
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      color: white;
-      text-decoration: none;
-    }
+      }
+
+
+
     nav {
       float: right;
       ul {
@@ -38,6 +42,10 @@
             font-weight: 300;
             color: white;
             text-decoration: none;
+
+            &:hover {
+            color: darken(white, 30%);
+            }
           }
         }
       }
@@ -62,55 +70,18 @@
     background-color: $highlight;
     padding: 1rem 2rem;
     margin-right: 2.5rem;
+
+    &:hover {
+      background-color: darken($highlight, 10%);
+    }
   }
   .button_white {
     background-color: white;
     color: black;
     padding: 1rem 3rem;
-  }
-}
 
-
-
-//---------------------WHAT WE DO PAGE---------------------
-
-#about-background {
-  background-color: honeydew;
-  background-size: cover;
-  height: 100vh;
-  header {
-    padding: 3rem 3rem 0 3rem;
-    #logo {
-      float: left;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: white;
-      text-decoration: none;
-    }
-    #span-logo {
-      font-weight: 300;
-      float: left;
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      color: white;
-      text-decoration: none;
-    }
-    nav {
-      float: right;
-      ul {
-        list-style: none;
-        margin: 0;
-        li {
-          display: inline;
-          margin-left: 2.5rem;
-          a {
-            font-weight: 300;
-            color: white;
-            text-decoration: none;
-          }
-        }
-      }
+    &:hover {
+      background-color: darken(white, 20%);
     }
   }
 }
