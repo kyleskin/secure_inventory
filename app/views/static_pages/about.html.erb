@@ -1,13 +1,46 @@
-<div id="about-background">
+<div id="background">
   <header>
-    <a><%= link_to 'secure', root_path, id: 'logo' %>
-      <span><%= link_to 'inventory', root_path, id: 'span-logo' %></span>
-    </a>
+
+    <div id='brand'>
+        <%= link_to 'secure', root_path, class: 'logo' %>
+        <%= link_to 'inventory', root_path, class: 'logo', id: 'logo_thin' %>
+    </div>
+
+
     <nav>
+
       <ul>
-        <li><%= link_to 'About Us', about_path, class: 'active_link' %></li>
+        <li><%= link_to 'About Us', about_path %></li>
         <li><%= link_to 'Create Account' %></li>
         <li><%= link_to 'Sign In' %>
       </ul>
+
     </nav>
-  </heaabout-background>
+
+  </header>
+
+  <div id='text_block'>
+    <p>In case of a homeowner’s insurance claim, you need to be able to provide proof of ownership of your belongings to make sure you get paid a fair amount.</p>
+    <p>We provide a safe, secure way for you to store photos and details of your belongings in the cloud.</p>
+    <p>That way, you never have to worry about your records being destroyed or lost.</p>
+  </div>
+
+</div>
+
+<div id='dark_background'>
+  <div id="testimonial_wrapper">
+    <div class="testimonial">
+      <p>Ethical celiac retro, before they sold out bitters raw denim waistcoat venmo selfies.</p>
+    </div>
+    <div class="testimonial">
+      <p>Fingerstache iPhone aesthetic, bicycle rights echo park green juice poutine shoreditch XOXO fixie +1.</p>
+    </div>
+    <div class="testimonial">
+      <p>Umami lo-fi drinking vinegar, cold-pressed kinfolk man bun farm-to-table narwhal street art.</p>
+    </div>
+  </div>
+
+  <h2>get started today</h2>
+
+  <%= link_to 'Create Account', root_path, class: 'button button_highlight button_about' %>
+</div>
