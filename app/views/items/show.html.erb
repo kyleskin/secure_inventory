@@ -20,5 +20,7 @@
   <%= number_to_currency(@item.purchase_price) %>
 </p>
 
+<p><%= image_tag @item.image.url(:medium) %></p>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', dashboard_path %>

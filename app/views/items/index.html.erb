@@ -19,7 +19,7 @@
         <td><%= item.name %></td>
         <td><%= item.description %></td>
         <td><%= item.room %></td>
-        <td><%= number_to_currency(item.puchase_price) %></td>
+        <td><%= number_to_currency(item.purchase_price) %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
