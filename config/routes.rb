@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :items
   root 'static_pages#index'
   get '/about' => 'static_pages#about'
 
@@ -10,4 +11,6 @@ Rails.application.routes.draw do
   resources :users,
             only: [:new, :create],
             path_names: {new: "create account"}
+
+  get '/dashboard' => 'users#dashboard'
 end

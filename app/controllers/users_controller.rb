@@ -16,6 +16,9 @@ def create
   end
 end
 
+def dashboard
+end
+
 private
 
   def user_params
