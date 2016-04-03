@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Puchase price:</strong>
-  <%= number_to_currency(@item.puchase_price) %>
+  <strong>Purchase price:</strong>
+  <%= number_to_currency(@item.purchase_price) %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<%= link_to 'Back', dashboard_path %>
