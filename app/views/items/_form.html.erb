@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :room %><br>
-    <%= f.select( :room, options_for_select([['Family Room', 'Family Room'], ['Living Room', 'Living Room'], ['Kitchen', 'Kitchen'], ['Den', 'Den'], ['Master Bedroom', 'Master Bedroom'], ['Bedroom', 'Bedroom'], ['Office', 'Office']])) %>
+    <%= f.select( :room, options_for_select([['Select One...', 'Select One...'],['Family Room', 'Family Room'], ['Living Room', 'Living Room'], ['Kitchen', 'Kitchen'], ['Den', 'Den'], ['Master Bedroom', 'Master Bedroom'], ['Bedroom', 'Bedroom'], ['Office', 'Office']], f.object.room)) %>
   </div>
   <div class="field">
     <%= f.label :purchase_price %><br>

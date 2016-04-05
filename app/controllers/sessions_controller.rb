@@ -18,8 +18,8 @@ class SessionsController < ApplicationController
   def destroy
     if user = current_user
       session[:id] = nil
-      redirect_to root_path,
-        notice: "#{user.email} has been signed out."
+      redirect_to root_path
+        flash[:error] = "#{user.email} has been signed out."
     end
   end
 end
