@@ -30,8 +30,7 @@
 
 <br>
 
-<% @items.each do |item| %>
-  <h2><%= item.room %></h2>
-<% end %>
+
 
 <%= link_to 'New Item', new_item_path %>
+<%= link_to 'Edit Your Account', edit_user_path(current_user) %>

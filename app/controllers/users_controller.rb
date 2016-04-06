@@ -16,8 +16,8 @@ def create
   end
 end
 
-def dashboard
-  render 'items/index'
+def edit
+  @user = current_user
 end
 
 private

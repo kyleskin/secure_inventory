@@ -9,7 +9,6 @@ Rails.application.routes.draw do
           to: 'sessions#destroy'
 
   resources :users,
-            only: [:new, :create],
             path_names: {new: "create account"}
 
   root 'static_pages#index'
