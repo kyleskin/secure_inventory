@@ -17,6 +17,7 @@ def create
 end
 
 def dashboard
+  render 'items/index'
 end
 
 private

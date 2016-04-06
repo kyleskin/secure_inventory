@@ -12,5 +12,4 @@ Rails.application.routes.draw do
             only: [:new, :create],
             path_names: {new: "create account"}
 
-  get '/dashboard' => 'users#dashboard'
 end

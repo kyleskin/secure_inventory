@@ -16,6 +16,7 @@ end
 
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :items
   validates :first_name, :last_name, name: true
   validates :email, email: true, uniqueness: true
 end
