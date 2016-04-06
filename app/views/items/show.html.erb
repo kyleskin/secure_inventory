@@ -20,7 +20,11 @@
   <%= number_to_currency(@item.purchase_price) %>
 </p>
 
-<p><%= image_tag @item.image.url(:medium) %></p>
+<% unless @item.image_file_name? %>
+  <p>You should upload a picture of this item!</p>
+<% else %>
+  <p><%= image_tag @item.image.url(:medium) %></p>
+<% end %>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', dashboard_path %>
+<%= link_to 'Back', items_path %>
