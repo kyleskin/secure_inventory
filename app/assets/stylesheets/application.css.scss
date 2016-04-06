@@ -1,8 +1,9 @@
 $highlight: #0080ff;
 
-@import "static_pages";
-@import "normalize";
-
 body {
   font-family: 'Open Sans';
 }
+
+@import "static_pages";
+@import "normalize";
+@import "items";
