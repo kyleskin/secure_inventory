@@ -30,4 +30,8 @@
 
 <br>
 
+<% @items.each do |item| %>
+  <h2><%= item.room %></h2>
+<% end %>
+
 <%= link_to 'New Item', new_item_path %>
