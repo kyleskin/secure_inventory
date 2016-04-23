@@ -3,7 +3,7 @@
 #background {
   background-image: image_url('welcome-background.png');
   height: 100vh;
-  min-height: 540px;
+  min-height: 560px;
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -82,9 +82,10 @@
       background-color: darken(white, 20%);
     }
   }
+}
 
+// ---------ABOUT PAGE------------------------------//
 
-//----------About Page---------------
 
   #text_block {
     margin-top: 4rem;
@@ -97,7 +98,7 @@
       margin-left: 20%;
     }
   }
-}
+
 
 #dark_background {
   background-color: #333;
@@ -107,31 +108,35 @@
   background-size: cover;
   text-align: center;
   #testimonial_wrapper {
-    // margin-top: -6rem;
+    margin-top: -2rem;
 
     p {
-      padding-top: 3rem;
+      background: white;
+      display: inline-block;
+      width: 25%;
+      float: left;
+      margin: auto 3%;
     }
   }
-    h2 {
+  h2 {
+    color: white;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: 300;
+  }
+  .button {
+      text-decoration: none;
+      font-size: 1.25rem;
       color: white;
-      margin-bottom: 3rem;
-      font-size: 4rem;
-      font-weight: 300;
-    }
-    .button {
-        text-decoration: none;
-        font-size: 1.25rem;
-        color: white;
-        font-weight: 400;
-        border-radius: 2rem;
-    }
-    .button_highlight {
-      background-color: $highlight;
-      padding: 1rem 2rem;
+      font-weight: 400;
+      border-radius: 2rem;
+  }
+  .button_highlight {
+    background-color: $highlight;
+    padding: 1rem 2rem;
 
-      &:hover {
-        background-color: darken($highlight, 10%);
-      }
+    &:hover {
+      background-color: darken($highlight, 10%);
     }
   }
+}
