@@ -21,13 +21,13 @@
   </div>
   <div id="custom_room", class="field">
     <%= f.label :room %><br>
-    <%= f.select( :room, options_for_select([['Select One...', 'Select One...'],['Family Room', 'Family Room'], ['Living Room', 'Living Room'], ['Kitchen', 'Kitchen'], ['Den', 'Den'], ['Master Bedroom', 'Master Bedroom'], ['Bedroom', 'Bedroom'], ['Office', 'Office'], ['Custom Room...', 'Custom Room...']], f.object.room)) %>
+    <%= f.select( :room, options_for_select([['Select One...', 'Select One...'],['Family Room', 'Family Room'], ['Living Room', 'Living Room'], ['Kitchen', 'Kitchen'], ['Den', 'Den'], ['Master Bedroom', 'Master Bedroom'], ['Bedroom', 'Bedroom'], ['Office', 'Office']], f.object.room)) %>
   </div>
-  <!-- <div id="custom_room_link"><a href="#">Add Custom Room</a></div>
-  <div class="field", id="custom_room">
-    <%= f.label :room %><br>
-    <%= f.text_field :room %>
-  </div> -->
+  <% if @item.room == 'Custom' %>
+    <h2>Custom!!</h2>
+    f.label :room
+    f.text_field :room
+  <% end %>
   <div class="field">
     <%= f.label :purchase_price %><br>
     <%= f.text_field :purchase_price %>
