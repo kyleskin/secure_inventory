@@ -8,11 +8,11 @@
 
 
     <nav>
-
+<!-- <%= current_page?(about_path) ? 'active' : '' %> -->
       <ul>
-        <li><%= link_to 'About Us', about_path %></li>
-        <li><%= link_to 'Create Account' %></li>
-        <li><%= link_to 'Sign In' %>
+        <li><%= link_to 'About Us', about_path, class:current_page?(about_path) ? 'active' : '' %></li>
+        <li><%= link_to 'Create Account', new_user_path %></li>
+        <li><%= link_to 'Sign In', login_path %>
       </ul>
 
     </nav>
@@ -28,21 +28,23 @@
 </div>
 
 <div id='dark_background'>
-  <div id="testimonial_wrapper">
+
     <div class="testimonial">
-      <p>Ethical celiac retro, before they sold out bitters raw denim waistcoat venmo selfies.</p>
+      <p class='blurb'>Mixtape bushwick migas, affogato chillwave +1 meggings mustache hammock vinyl umami occupy waistcoat. Artisan cornhole salvia offal</p>
+      <%= image_tag 'profile_1.jpg', class:'picture' %>
     </div>
     <div class="testimonial">
-      <p>Fingerstache iPhone aesthetic, bicycle rights echo park green juice poutine shoreditch XOXO fixie +1.</p>
+      <p class='blurb'>Mixtape bushwick migas, affogato chillwave +1 meggings mustache hammock vinyl umami occupy waistcoat. Artisan cornhole salvia offal</p>
+      <%= image_tag 'profile_2.jpg', class:'picture' %>
     </div>
     <div class="testimonial">
-      <p>Umami lo-fi drinking vinegar, cold-pressed kinfolk man bun farm-to-table narwhal street art.</p>
+      <p class='blurb'>Mixtape bushwick migas, affogato chillwave +1 meggings mustache hammock vinyl umami occupy waistcoat. Artisan cornhole salvia offal</p>
+      <%= image_tag 'profile_3.jpg', class:'picture' %>
     </div>
-  </div>
 
   <br>
-
-  <h2>get started today</h2>
-
-  <%= link_to 'Create Account', root_path, class: 'button button_highlight button_about' %>
+  <div>
+    <h2>get started today</h2>
+    <%= link_to 'Create Account', new_user_path, class: 'button button_highlight' %>
+  </div>
 </div>

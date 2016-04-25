@@ -7,3 +7,7 @@ $highlight: #0080ff;
 body {
   font-family: 'Open Sans';
 }
+
+.active {
+  border-bottom: 3px solid $highlight;
+}
