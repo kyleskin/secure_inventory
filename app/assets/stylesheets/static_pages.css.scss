@@ -1,94 +1,46 @@
 //-----------------------------LANDING PAGE-----------------------------
-
-#background {
-  background-image: image_url('welcome-background.png');
-  height: 100vh;
-  min-height: 560px;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-
-  header {
-    padding: 3rem 3rem 0 3rem;
-
-      .logo {
-        display: inline-block;
-        float: left;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: white;
-        text-decoration: none;
-        &:hover {
-        color: darken(white, 30%);
-        }
-      }
-      #logo_thin {
-      padding-left: 3pt;
-      font-weight: 300;
-      }
-
-    nav {
-      float: right;
-      ul {
-        list-style: none;
-        margin: 0;
-        li {
-          display: inline;
-          margin-left: 2.5rem;
-          a {
-            font-weight: 300;
-            color: white;
-            text-decoration: none;
-
-            &:hover {
-            color: darken(white, 30%);
-            }
-          }
-        }
-      }
-    }
-  }
-  h1 {
+h1#landing_title {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  // margin: 0rem 0 6rem 0;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.button {
+    text-decoration: none;
+    font-size: 1.25rem;
     color: white;
-    font-size: 3.5rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin: 9rem 0 6rem 0;
-  }
-  .button {
-      text-decoration: none;
-      font-size: 1.25rem;
-      color: white;
-      font-weight: 400;
+    font-weight: 400;
 
-      border-radius: 2rem;
-  }
-  .button_highlight {
-    background-color: $highlight;
-    padding: 1rem 2rem;
-    margin-right: 2.5rem;
+    border-radius: 2rem;
+}
+.button_highlight {
+  background-color: $highlight;
+  padding: 1rem 2rem;
+  margin-right: 2.5rem;
 
-    &:hover {
-      background-color: darken($highlight, 10%);
-    }
-  }
-  .button_white {
-    background-color: white;
-    color: black;
-    padding: 1rem 3rem;
-
-    &:hover {
-      background-color: darken(white, 20%);
-    }
+  &:hover {
+    background-color: darken($highlight, 10%);
   }
 }
+.button_white {
+  background-color: white;
+  color: black;
+  padding: 1rem 3rem;
+
+  &:hover {
+    background-color: darken(white, 20%);
+  }
+}
+
 
 // ---------ABOUT PAGE------------------------------//
 
 
   #text_block {
-    margin-top: 4rem;
+    padding-top: 5rem;
 
     p {
       width: 60%;
@@ -96,6 +48,7 @@
       font-weight: 700;
       color: white;
       margin-left: 20%;
+      margin-top: 0;
     }
   }
 
@@ -103,8 +56,8 @@
 #dark_background {
   background-color: #333;
   min-height: 480px;
-  background-position: center;
-  background-attachment: fixed;
+  // background-position: center;
+  // background-attachment: fixed;
   background-size: cover;
   text-align: center;
   position: relative;
