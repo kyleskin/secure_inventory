@@ -1,0 +1,16 @@
+#create_account_wrapper {
+  background: rgba(0,0,0,.6);
+  max-width: 40%;
+  border-radius: .7rem;
+  margin:7rem auto 0 auto;
+  padding: 1rem;
+  h1 {
+    color: white;
+    margin: 0;
+    padding-bottom: .5rem;
+  }
+  #create_account_button{
+    border: none;
+    margin: 1rem 0;
+  }
+}

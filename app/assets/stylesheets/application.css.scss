@@ -3,6 +3,7 @@ $highlight: #0080ff;
 @import "normalize";
 @import "static_pages";
 @import "sessions";
+@import "users";
 @import "items";
 
 body {
@@ -62,4 +63,13 @@ body {
 
 .active {
   border-bottom: 3px solid $highlight;
+}
+
+.form_input {
+  border-radius: .2rem;
+  border: none;
+  padding: .3rem;
+  margin: .5rem;
+  display: inline-block;
+  // float: left;
 }

@@ -3,8 +3,8 @@
 
   <%= form_tag login_path, id:'sign_in_form' do %>
       <p>
-        <%= text_field_tag :email, nil, class:'sign_in_input', placeholder:"email" %>
-        <%= password_field_tag :password, nil, class:'sign_in_input', placeholder:"password" %>
+        <%= text_field_tag :email, nil, class:'form_input', placeholder:"email" %>
+        <%= password_field_tag :password, nil, class:'form_input', placeholder:"password" %>
       </p>
     <p><%= submit_tag 'Sign In', class:'button button_highlight', id:'sign_in_btn' %></p>
   <% end %>
