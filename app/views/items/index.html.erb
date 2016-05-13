@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Sign Out', logout_path, method: :delete %>
-
 <h1>Listing Items</h1>
 
 <table>
@@ -23,8 +21,6 @@
         <td><%= item.room %></td>
         <td><%= number_to_currency(item.purchase_price) %></td>
         <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +29,3 @@
 <br>
 
 <%= link_to 'New Item', new_item_path %>
-<%= link_to 'Edit Your Account', edit_user_path(current_user) %>

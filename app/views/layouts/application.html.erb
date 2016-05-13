@@ -10,30 +10,26 @@
 <body>
   <div id="background">
     <header>
-
-      <div id='brand'>
-          <%= link_to 'secure', root_path, class: 'logo' %>
-          <%= link_to 'inventory', root_path, class: 'logo', id: 'logo_thin' %>
+      <div>
+        <a class='logo' href= "/" <% root_path %> >secure<span id='logo_thin'>inventory</span></a>
+        <!-- <%= link_to 'secure''inventory', root_path, class:'logo', id:'logo_thin' %> -->
       </div>
-
-
       <nav>
-
         <ul>
           <li><%= link_to 'About Us', about_path %></li>
           <% if current_user %>
+            <li><%= link_to 'Your Account', edit_user_path(current_user) %></li>
             <li><%= link_to 'Sign Out', logout_path, method: :delete %></li>
           <% else %>
             <li><%= link_to 'Create Account', new_user_path %></li>
             <li><%= link_to 'Sign In', login_path %>
           <% end %>
         </ul>
-
       </nav>
-
     </header>
 
     <%= yield %>
+
   </div>
 </body>
 </html>

@@ -20,23 +20,22 @@ body {
 
   header {
     padding: 1.5rem 3rem 0 3rem;
-
-      .logo {
-        display: inline-block;
-        float: left;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: white;
-        text-decoration: none;
-        &:hover {
-        color: darken(white, 30%);
-        }
+    .logo {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      float: left;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.5rem;
+      &:hover {
+      color: darken(white, 30%);
       }
-      #logo_thin {
-      padding-left: 3pt;
-      font-weight: 300;
-      }
+    }
+    #logo_thin {
+    padding-left: 3pt;
+    font-weight: 300;
+    }
 
     nav {
       float: right;
