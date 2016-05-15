@@ -17,12 +17,9 @@ class ItemsController < ApplicationController
     @item = current_user.items.build
   end
 
-  # GET /items/1/edit
   def edit
   end
 
-  # POST /items
-  # POST /items.json
   def create
     @item = current_user.items.build(item_params)
 
@@ -35,8 +32,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /items/1
-  # PATCH/PUT /items/1.json
   def update
     respond_to do |format|
       if @item.update(item_params)
@@ -47,13 +42,10 @@ class ItemsController < ApplicationController
     end
   end
 
-  # DELETE /items/1
-  # DELETE /items/1.json
   def destroy
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was removed.' }
-      format.json { head :no_content }
     end
   end
 
