@@ -4,4 +4,5 @@ class Item < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   validates :name, :description, :room, presence: true
   validates :purchase_price, numericality: true, allow_nil: true
+  validates :room, format: {without: /Select One.../}
 end
