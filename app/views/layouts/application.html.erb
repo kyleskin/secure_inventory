@@ -15,12 +15,12 @@
       </div>
       <nav>
         <ul>
-          <li class=" <%= 'active' if current_page?(about_path)%>" ><%= link_to 'About Us', about_path %></li>
           <% if current_user %>
             <li class=" <%= 'active' if current_page?(items_path)%>"><%= link_to 'Your Inventory', items_path %></li>
             <li class=" <%= 'active' if current_page?(user_path(current_user))%>"><%= link_to 'Your Account', user_path(current_user) %></li>
             <li><%= link_to 'Sign Out', logout_path, method: :delete %></li>
           <% else %>
+            <li class=" <%= 'active' if current_page?(about_path)%>" ><%= link_to 'About Us', about_path %></li>
             <li><%= link_to 'Create Account', new_user_path %></li>
             <li><%= link_to 'Sign In', login_path %>
           <% end %>

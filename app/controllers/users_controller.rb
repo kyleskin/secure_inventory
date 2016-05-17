@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit]
+  before_action :set_user, only: [:show, :edit, :update]
 
 def new
   @user = User.new
@@ -20,6 +20,14 @@ def show
 end
 
 def edit
+end
+
+def update
+  if @user.update(user_params)
+    redirect_to edit_user_path(current_user), notice: 'Account Updated'
+  else
+    render :edit
+  end
 end
 
 private
