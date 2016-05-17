@@ -10,7 +10,7 @@ body {
   font-family: 'Open Sans';
 }
 
-#background {
+.background.white {
   background-image: image_url('welcome-background.png');
   height: 100vh;
   min-height: 560px;
@@ -52,6 +52,58 @@ body {
 
             &:hover {
             color: darken(white, 30%);
+            border-bottom: 3px solid $highlight;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.background.black {
+  background-color: rgba(230, 231, 232, 1);
+  height: 100vh;
+  min-height: 560px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  header {
+    padding: 1.5rem 3rem 0 3rem;
+    .logo {
+      color: black;
+      text-decoration: none;
+      display: inline-block;
+      float: left;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.5rem;
+      &:hover {
+      color: darken(white, 60%);
+      }
+    }
+    #logo_thin {
+    padding-left: 3pt;
+    font-weight: 300;
+    }
+
+    nav {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          display: inline;
+          margin-left: 2.5rem;
+          a {
+            font-weight: 300;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+            color: darken(white, 60%);
+            border-bottom: 3px solid $highlight;
             }
           }
         }
