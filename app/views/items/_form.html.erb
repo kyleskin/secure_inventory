@@ -27,6 +27,9 @@
     <%= f.label :purchase_price %><br>
     <%= f.text_field :purchase_price, :precision => 2 %>
   </div>
+  <% if @item.image_file_name? %>
+    <%= image_tag @item.image.url(:medium) %>
+  <% end %>
   <div class="field">
     <%= f.label 'Upload an image' %><br>
     <%= f.file_field :image %>
