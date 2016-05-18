@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :password_update]
 
 def new
   @user = User.new
@@ -31,6 +31,20 @@ def update
 end
 
 def password_reset
+end
+
+def password_update
+  if @user.try(:authenticate, params[:current_password])
+    if @user.update_attributes(user_params)
+      redirect_to edit_user_path(current_user), notice: 'Your password has been updated'
+    else
+      flash[:alert] = 'Password not updated'
+      render :edit
+    end
+  else
+    flash[:alert] = 'Password not updated'
+    render :edit
+  end
 end
 
 private
