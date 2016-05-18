@@ -1,3 +1,63 @@
-<h2>Edit Account</h2>
+<h2>Edit Your Information</h2>
 
-<%= render 'form' %>
+<%= form_for(@user, html: { role: "form" }) do |f| %>
+  <div>
+    <div>
+      <%= f.text_field :first_name, class:'form_input', placeholder:'first name' %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= f.text_field :last_name, class:'form_input', placeholder:'last name' %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= f.text_field :email, class:'form_input', placeholder:'email' %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= f.submit 'Save Changes', class: "button button_highlight", id:"edit_account_button" %>
+    </div>
+  </div>
+<% end %>
+
+
+<%= form_for(@user, url: password_reset_path, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@user.errors.count, "error") %> prohibited this profile from being saved:</h4>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <div>
+      <%= password_field_tag :current_password, params[:current_password], class:'form_input', placeholder: 'current password' %>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= f.password_field :password, class:'form_input', placeholder: 'new password' %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= f.password_field :password_confirmation, class:'form_input', placeholder: 'confirm new password' %>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= f.submit 'Update Password', class: 'button button_highlight' %>
+    </div>
+  </div>
+<% end %>

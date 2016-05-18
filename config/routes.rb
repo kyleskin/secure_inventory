@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   resources :users,
             path_names: {new: "create account"}
 
+  get '/password_reset' => 'users#password_reset'
+  patch 'password_reset' => 'users#password_update'
+
   root 'static_pages#index'
 
 end

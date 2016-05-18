@@ -2,5 +2,49 @@
 
   <h1>Get Started Today</h1>
 
-  <%= render 'form' %>
+  <%= form_for(@user, html: { role: "form" }) do |f| %>
+    <% if @user.errors.any? %>
+      <div>
+        <h4><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
+
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <div>
+        <%= f.text_field :first_name, class:'form_input', placeholder:'first name' %>
+      </div>
+    </div>
+    <div>
+      <div>
+        <%= f.text_field :last_name, class:'form_input', placeholder:'last name' %>
+      </div>
+    </div>
+    <div>
+      <div>
+        <%= f.text_field :email, class:'form_input', placeholder:'email' %>
+      </div>
+    </div>
+    <div>
+      <div>
+        <%= f.password_field :password, class:'form_input', placeholder:'password' %>
+      </div>
+    </div>
+    <div>
+      <div>
+        <%= f.password_field :password_confirmation, class:'form_input', placeholder:'confirm password' %>
+      </div>
+    </div>
+    <div>
+      <div>
+        <%= f.submit 'Create Account', class: "button button_highlight", id:"create_account_button" %>
+      </div>
+    </div>
+  <% end %>
+
 </div>
